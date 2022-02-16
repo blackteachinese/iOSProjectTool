@@ -32,3 +32,9 @@ findsymbol.sh脚本可以用于扫描iOS工程的源代码和framework，扫描�
 步骤1：chmod +x findsymbol.sh
 步骤2：findsymbol.sh xxx 注意：不要使用sh findsymbol.sh 执行脚本，否则结果输出为空
 
+## 生成指定模块之间的依赖关系图
+
+### 使用说明
+步骤1：配置需要分析的模块名到podNames.txt文件
+步骤2（可选）：podName和frameworkName不一致的模块，需要配映射关系
+步骤2：ruby dependenceRelation.rb mainProjectPath(主工程路径) targetReposPath(待分析模块路径) isCircleMode(1/0)
